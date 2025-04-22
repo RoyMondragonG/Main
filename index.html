@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roy_Portafolio</title>
+    <style>
+        body {
+            background-color: #f5f9ff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #logo {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        #logo img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        #logo img:hover {
+            transform: scale(1.1);
+        }
+        
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #de3b27;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #4d5b6e; /* Color oscuro y desaturado derivado de #f5f9ff */
+            text-align: justify;
+        }
+        
+        #translateBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #de3b27;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        #translateBtn:hover {
+            background-color: #b83020;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #4d5b6e;
+            font-size: 14px;
+        }
+        
+        .contact {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="translateBtn">Traducir / Translate</button>
+    
+    <div id="logo">
+        <a href="https://roymondragon.myportfolio.com">
+            <img src="img/LogoUnido.png">
+        </a>
+        <h1>Rodrigo Mondragón Portfolio</h1>
+    </div>
+    
+    <div id="content">
+        <div id="spanish-content">
+            <p>Soy Rodrigo Mondragón, artista digital con enfoque en modelado 3D, escultura digital y dirección de arte. Me dedico a dar vida a ideas a través del arte digital, combinando creatividad, técnica y narrativa visual.</p>
+            
+            <p>Soy licenciado en Arte Digital por el Tec de Monterrey con la concentración de modelado y escultura 3D. Trabajo en proyectos de animación, diseño de personajes, dirección creativa e ilustración, participando en cortometrajes premiados y en la conceptualización de experiencias visuales para eventos y productos.</p>
+            
+            <p>Entre mis proyectos más destacados se encuentra Nubes con forma de nube, donde fui director, guionista y artista de fondos, además de la creación de juegos de mesa y la identidad visual de eventos con impacto estudiantil. También formé parte del cortometraje ganador de Discorruption Arts 2024, contribuyendo desde el equipo de producción.</p>
+            
+            <p>Gestiono equipos creativos, desarrollo campañas de marketing visual y colaboro en iniciativas educativas que combinan arte y tecnología. En 2023, como presidente de la Sociedad de Estudiantes de Arte Digital del Tec de Monterrey, campus Querétaro, lideré la organización de eventos, gestioné equipos creativos y fomenté la comunidad artística dentro de la universidad, logrando un reconocimiento en la Gala FETEC por nuestra contribución al campus.</p>
+            
+            <p>Mi objetivo es crear imágenes y mundos que no solo sean visualmente impactantes, sino que cuenten historias y generen conexiones. Siempre busco nuevos retos y oportunidades para seguir explorando los límites del arte digital.</p>
+            
+            <p class="contact">Contacto: roy.mondragon@hotmail.com</p>
+        </div>
+        
+        <div id="english-content" style="display: none;">
+            <p>I'm Rodrigo Mondragón, a digital artist specializing in 3D modeling, digital sculpting, and art direction. I bring ideas to life through digital art, combining creativity, technique, and visual storytelling.</p>
+            
+            <p>I hold a Bachelor's Degree in Digital Art from Tec de Monterrey, with a concentration in 3D modeling and sculpting. My experience spans animation projects, character design, creative direction, and illustration, contributing to award-winning short films and the visual conceptualization of events and products.</p>
+            
+            <p>One of my most notable projects is Nubes con forma de nube, where I served as director, screenwriter, and background artist. I have also designed board games and created visual identities for student-driven events. Additionally, I was part of the production team for the award-winning short film in Discorruption Arts 2024.</p>
+            
+            <p>I excel in leading creative teams, developing visual marketing campaigns, and collaborating on educational initiatives that blend art and technology. In 2023, as President of the Digital Art Student Society at Tec de Monterrey, Querétaro campus, I organized events, managed creative teams, and fostered the artistic community on campus, earning recognition at the FETEC Gala for our contributions.</p>
+            
+            <p>My goal is to create images and worlds that are not only visually striking but also tell stories and build connections. I'm always looking for new challenges and opportunities to push the boundaries of digital art.</p>
+            
+            <p class="contact">Contact: roy.mondragon@hotmail.com</p>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 Rodrigo Mondragón
+    </footer>
+    
+    <script>
+        document.getElementById('translateBtn').addEventListener('click', function() {
+            const spanishContent = document.getElementById('spanish-content');
+            const englishContent = document.getElementById('english-content');
+            
+            if (spanishContent.style.display !== 'none') {
+                spanishContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                this.textContent = 'Español / Spanish';
+            } else {
+                spanishContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                this.textContent = 'Traducir / Translate';
+            }
+        });
+    </script>
+</body>
+</html>
